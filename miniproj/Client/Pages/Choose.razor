@@ -1,0 +1,191 @@
+﻿@page "/"
+@inject NavigationManager navi
+<table class="table table-bordered" >
+    <thead>
+        <tr>
+            <th>Number of clothes you chosed</th>
+            <th>Total cost</th>
+            <th>End of choosing</th>
+        </tr>
+    </thead>
+    <tbody> 
+        <tr>
+            <td>@Bala.count</td>
+            <td>@Bala.price</td>
+            <td><button class="btn btn-primary"@onclick="finishing">End</button></td>
+        </tr>
+    </tbody>  
+</table>           
+
+
+<table class="table table-bordered" >
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Color</th>
+            <th>Size</th>
+            <th>Price</th>
+            <th>Add to cart</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><img src=@array1.image width="180px"/></td>
+            <td>@array1.color</td>
+            <td>@array1.size</td>
+            <td>@array1.price</td>
+            
+            <td><button class="btn btn-primary"@onclick="increase1">Add</button></td>
+            @* <td><button type="submit">Add</button></td> *@
+        </tr>
+    </tbody>
+
+    <tbody>
+        <tr>
+            <td><img src=@array2.image width="150px"/></td>
+            <td>@array2.color</td>
+            <td>@array2.size</td>
+            <td>@array2.price</td>
+            <td><button class="btn btn-primary"@onclick="increase2">Add</button></td>
+        </tr>
+    </tbody> 
+
+    <tbody>
+        <tr>
+            <td><img src=@array3.image width="160px"/></td>
+            <td>@array3.color</td>
+            <td>@array3.size</td>
+            <td>@array3.price</td>
+            <td><button class="btn btn-primary"@onclick="increase3">Add</button></td>
+        </tr>
+    </tbody>
+
+    <tbody>
+        <tr>
+            <td><img src=@array4.image width="160px"/></td>
+            <td>@array4.color</td>
+            <td>@array4.size</td>
+            <td>@array4.price</td>
+            <td><button class="btn btn-primary"@onclick="increase4">Add</button></td>
+        </tr>
+    </tbody>
+
+    <tbody>
+        <tr>
+            <td><img src=@array5.image width="160px"/></td>
+            <td>@array5.color</td>
+            <td>@array5.size</td>
+            <td>@array5.price</td>
+            <td><button class="btn btn-primary"@onclick="increase5">Add</button></td>
+        </tr>
+    </tbody>
+
+    <tbody>
+        <tr>
+            <td><img src=@array6.image width="160px"/></td>
+            <td>@array6.color</td>
+            <td>@array6.size</td>
+            <td>@array6.price</td>
+            <td><button class="btn btn-primary"@onclick="increase6">Add</button></td>
+        </tr>
+    </tbody>
+
+    <tbody>
+        <tr>
+            <td><img src=@array7.image width="155px"/></td>
+            <td>@array7.color</td>
+            <td>@array7.size</td>
+            <td>@array7.price</td>
+            <td><button class="btn btn-primary"@onclick="increase7">Add</button></td>
+        </tr>
+    </tbody>
+
+    <tbody>
+        <tr>
+            <td><img src=@array8.image width="280px"/></td>
+            <td>@array8.color</td>
+            <td>@array8.size</td>
+            <td>@array8.price</td>
+            <td><button class="btn btn-primary"@onclick="increase8">Add</button></td>
+        </tr>
+    </tbody>
+</table>            
+
+@code 
+{
+    @* private int current =0; *@
+    @* Bala.count =0; *@
+    public kala array1=new kala(){image="image/image2.jpg",color="blue",size="large", price=129000};
+    private void increase1()
+    {
+        @* current++; *@
+        Bala.count++;
+        Bala.price=Bala.price+array1.price;
+        _cart.carts.Add(array1);
+    }
+
+    public kala array2=new kala(){image="image/image3.jpg",color="red",size="Small", price=137000};
+    private void increase2()
+    {
+        Bala.count++;
+        Bala.price=Bala.price+array2.price;
+        _cart.carts.Add(array2);
+    }
+
+    public kala array3=new kala(){image="image/image4.jpg",color="brown",size="Medium", price=178000};
+    private void increase3()
+    {
+        Bala.count++;
+        Bala.price=Bala.price+array3.price;
+        _cart.carts.Add(array3);
+    }
+
+    public kala array4=new kala(){image="image/image5.jpg",color="pink",size="Large", price=100000};
+    private void increase4()
+    {
+        Bala.count++;
+        Bala.price=Bala.price+array4.price;
+        _cart.carts.Add(array4);
+    }
+
+    public kala array5=new kala(){image="image/image6.jpg",color="gray",size="Large", price=420000};
+    private void increase5()
+    {
+        Bala.count++;
+        Bala.price=Bala.price+array5.price;
+        _cart.carts.Add(array5);
+    }
+
+    public kala array6=new kala(){image="image/image7.jpg",color="blue",size="Small", price=320000};
+    private void increase6()
+    {
+        Bala.count++;
+        Bala.price=Bala.price+array6.price;
+        _cart.carts.Add(array6);
+    }
+
+    public kala array7=new kala(){image="image/image8.jpg",color="orange",size="Large", price=328000};
+    private void increase7()
+    {
+        Bala.count++;
+        Bala.price=Bala.price+array7.price;
+        _cart.carts.Add(array7);
+    }
+
+    public kala array8=new kala(){image="image/image9.jpg",color="red",size="Medium", price=550000};
+    private void increase8()
+    {
+        Bala.count++;
+        Bala.price=Bala.price+array8.price;
+        _cart.carts.Add(array8);
+    }
+
+    private void finishing()
+    {
+        navi.NavigateTo("/information");
+    }
+    
+    
+
+}          
+

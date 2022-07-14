@@ -1,0 +1,25 @@
+@page "/cart"
+<table class="table table-bordered" >
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Color</th>
+            <th>Size</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+
+            @foreach(var i in _cart.carts)
+            {
+                <tr>
+                    <td><img src=@i.image width="180px"/></td>
+                    <td>@i.color</td>
+                    <td>@i.size</td>
+                    
+                    <td>@i.price</td>
+                </tr>
+            }
+    </tbody> 
+</table> 
